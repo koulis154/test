@@ -1,4 +1,6 @@
 /* Style inputs with type="text", select elements and textareas */
+
+
 input[type=text], select, textarea {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */  
@@ -27,8 +29,38 @@ input[type=text], select, textarea {
   }
   
   /* Add a background color and some padding around the form */
-  .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
+  .bigcontainer {
+    display:flex;
+    flex-direction: row;
+    align-items: flex-end;
+    position:fixed;
+    bottom: 0px;
+    left: 10px;
+    justify-content: space-between;
+}
+
+.flip-card {
+    background-color: #f1f1f1;
+    width:200px;
+    height:100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    padding-right:125px;
+    padding-left:125px;
+    margin-left: 25px;
+    margin-right:25px;
+}
+
+  .flip-card {
+    flex: 25%;
+    padding: 5px;
   }
+
+#c4{
+  margin-right: 0px;
+}
+
+
+  
