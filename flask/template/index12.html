@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index12.css') }}" type="text/css">
+
+    <title>test</title>
+</head>
+    <body>
+        <form  method="POST" action="#">
+        <div class="navbar">
+            
+            <input type ="submit" name = "home" value ="home_1">
+            <input type ="submit" name = "library" value ="library_1">
+            <input type ="submit" name = "upload" value ="upload_1">
+            <input type ="submit" name = "contact" value ="contact_1">
+            <div class="dropdown">
+                <input type ="submit" name = "profil" value = "profil_1" class="dropbtn">Profile
+                    <i class="fa fa-caret-down"></i>
+                <div class="dropdown-content">
+                    <input type ="submit" name = "settings" value ="settings_1">
+                    <input type ="submit" name = "loginnew" value ="loginnew_1">
+                </div>
+            </div>
+        </div>
+    </form>
+    </body>
+</html>
