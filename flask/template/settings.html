@@ -11,7 +11,7 @@
         <!-- <link rel="stylesheet" href="settings.css"> -->
     </head>
     <body>
-        <form action="/action_page.php" style="border:1px solid #ccc">
+        <form method ="POST" style="border:1px solid #ccc">
             <div class="container">
                 <h1>Settings</h1>
                 <p>Make changes.</p>
@@ -19,18 +19,18 @@
 
 
                 <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
+                <input type="text" placeholder="Enter Email" name="enter email" required>
 
                 <label for="psw"><b>Enter Current Password</b></label>
-                <input type="password" placeholder="Enter Current Password" name="psw" required>
+                <input type="password" placeholder="Enter Current Password" name="current password" required>
 
                 <label for="psw-repeat"><b>Repeat Password</b></label>
-                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                <input type="password" placeholder="Repeat Password" name="repeat new password" required>
             
 
                 <div class="clearfix">
                     <button type="button" class="cancelbtn"><a href="index12.html">Cancel</a></button>
-                <button type="submit" class="signupbtn">Save</button>
+                <input type="submit" name = "save" value = "save" class="signupbtn">
                 </div>
             </div>
         </form>
