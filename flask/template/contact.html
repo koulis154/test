@@ -2,25 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}" type="text/css"> -->
     <title>test</title>
 </head>
 <body>
     <h1>Hello world!</h1>
-    <form method="POST" action="#">
-        <input type="text"  name="first_name" value="one" >
-        <button type="submit" value="run">Submit</button>
-    </form>
-</body>
-</html>
-
-<link rel="stylesheet" href="contact.css">
-
 <a href="table.html"></a>
 <div class="container">
 
-
-    
     <form action="thankyou.html">
         <p>Leave your feedback<p>
 
@@ -30,11 +19,11 @@
             div {text-align: center;}
             </style>
         
-      <input type="button"  value="1">
-      <input type="button"  value="2">
-      <input type="button"  value="3">
-      <input type="button"  value="4">
-      <input type="button"  value="5">
+      <input type="button" value="1" id="one">
+      <input type="button" value="2" id="two">
+      <input type="button" value="3" id="three">
+      <input type="button" value="4" id="four">
+      <input type="button" value="5" id="five">
 
    
       <p><label for="feedback_field">Leave your feedback</label></p>
@@ -45,11 +34,12 @@
         <textarea id="feedback_field" name="subject" placeholder="feedback" style="height:200px"></textarea>  
    
       </div> 
-      <body>
         
-      </body>
+      
 
       <input type="submit" value="submit">
   
     </form>
   </div>
+  
+</body>
