@@ -14,8 +14,21 @@ def index():
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
+    if request.method =='POST':
+        image = request.form["image"]
+        sound = request.form["sound"]
 
-	return render_template('upload.html')
+        if image and sound:
+            print(image, sound)
+        elif image and len(sound) == 0:
+            print(image)
+        elif sound and len(image) == 0:
+            print(sound)
+
+       
+        print(request.form)
+      
+    return render_template('upload.html')
 
 
 @app.route('/contact', methods=['GET', 'POST'])
@@ -46,63 +59,37 @@ def contact():
         
         elif "subject" in request.form:
             feedback = request.form["subject"]
-            
-        
-
-        
-
     return render_template('contact.html')
 
 
 @app.route('/account', methods=['GET', 'POST'])
 def createaccount():
     if request.method =="POST":
-        first_name = 0
-        last_name = 0
-        age = 0
-        email = 0
-        password = 0
-        new_password_1 = 0
-        sign_in = 0
-        male = 0 
-        female = 0
-        prefer_not_to_say = 0
         print(request.form)
-       
-        if "first-name" in request.form:
-            first_name = request.form["first-name"]
-            
-        elif "last-name" in request.form:
-            last_name = request.form["last-name"]
-       
-        elif "age" in request.form:
-            age = request.form["age"]
-
-        elif "email" in request.form:
-            email = request.form["email"]
-
-        elif "psw" in request.form:
-            password = request.form["psw"]
-        
-        elif "psw-repeat" in request.form:
-            new_password_1 = request.form["psw-repeat"]
-
-        elif "male" in request.form:
+        first_name = request.form["first-name"]
+        last_name = request.form["last-name"]
+        age = request.form["age"]
+        email = request.form["email"]
+        password = request.form["psw"]
+        new_password_1 = request.form["psw-repeat"]
+        if "male" in request.form:
             male = request.form["male"]
-
         elif "female" in request.form:
             female = request.form["female"]
-        
         elif "prefer not to say" in request.form:
-            new_password_1 = request.form["prefer not to say"]
-
-   
+            prefer_not_to_say = request.form["prefer not to say"]
         return redirect(url_for('login'))
-    return render_template('createaccount.html')
 
+    return render_template('createaccount.html')
 
 @app.route('/forgot', methods=['GET', 'POST'])
 def forgot():
+    if request.method == "POST":
+        user_email = request.form["enter email"]
+        password_forgot = request.form["new password"]
+        repeat_new_psw = request.form["new password"]
+
+        return redirect(url_for('login'))
 
     return render_template('forgot.html')
 
@@ -113,19 +100,10 @@ def library():
 	return render_template('library.html')
 
 
-
-
-"""@app.route('/table', methods=['GET', 'POST'])
-def table():
-
-	return render_template('table.html')
-"""
-
 @app.route('/index', methods=['GET', 'POST'])
 def index12():
     if request.method =="POST":
 
-       
         if request.form.get("library") == "Library":
             return redirect(url_for('library'))
             
@@ -134,7 +112,6 @@ def index12():
         
         elif request.form.get("contact") == "Contact Us":
             return redirect(url_for('contact'))
-        
         
         elif request.form.get("settings") == "Settings":
             return redirect(url_for('settings'))
@@ -151,59 +128,44 @@ def login():
     
    if request.method =="POST":
        
-        if "first-name" in request.form:
-            first_name = request.form["first-name"]
-            
-        elif "last-name" in request.form:
-            last_name = request.form["last-name"]
+       email_1 = 0
+       psw_1 = 0
+       print(request.form)
+       sign_in_1 = 0
+       cancel_forgot = 0
+       email_1 = request.form["email_1"]
+       psw_1 = request.form["psw_1"]
+
+       if "sign_in" in request.form:
+            return redirect(url_for('index12'))
+        
+       if "cancel_forgot" in request.form:
+            cancel_forgot = request.form["cancel_forgot"]
+    
        
-        elif "age" in request.form:
-            age = request.form["age"]
-
-        elif "email" in request.form:
-            email = request.form["email"]
-
-
-
-
-
-       if request.form.get("sign_in") == "Sign in":
-           return redirect(url_for('index12'))
-       
-       elif request.form.get("forgot") == "Forgot Password":
-       
+       if request.form.get("forgot") == "Forgot Password":
            return redirect(url_for('forgot'))
        
-       elif request.form.get("create_account") == "Create new Account":
+       if request.form.get("create_account") == "Create new Account":
            return redirect(url_for('createaccount'))
           
-           redirect(url_for('index12'))
-      
        
    return render_template('loginnew.html')
 
 @app.route('/settings', methods=['GET', 'POST'])
 def settings():
     if request.method =="POST":
-        enter_email = 0
-        current_password = 0
-        new_password = 0
-        save = 0
+        #enter_email = 0
+       # current_password = 0
+        #new_password = 0
+        #save = 0
         print(request.form)
-       
-        if "enter email" in request.form:
-            enter_email = request.form["enter email"]
-           
-        elif "current password" in request.form:
-            current_password = request.form["current password"]
-       
-        elif "repeat new password" in request.form:
-            new_password = request.form["repeat new password"]
-        
-        elif "save" in request.form:
-            save = request.form["save"]
+        enter_email = request.form["enter email"]
+        current_password = request.form["current password"]
+        new_password = request.form["repeat new password"]
+        #save = request.form["save"]
 
-        return redirect(url_for('login'))
+        return redirect(url_for('index12'))
     return render_template('settings.html')
 
 
