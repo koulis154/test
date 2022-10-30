@@ -3,10 +3,6 @@
   border-color: black;
 }
 
-
-
-
-
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
   width: 100%; /* Full width */
@@ -45,7 +41,6 @@ input[type=submit]:hover {
 
 
 }
-
 
 input[type=button]{
   width: 100px;

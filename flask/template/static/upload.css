@@ -11,6 +11,15 @@ input[type=text], select, textarea {
     margin-bottom: 16px; /* Bottom margin */
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
   }
+
+
+
+  .container1{
+    display:flex;
+    justify-content: space-around;
+
+}
+
   
   /* Style the submit button with a specific background color etc */
   input[type=submit] {
@@ -29,14 +38,15 @@ input[type=text], select, textarea {
   }
   
   /* Add a background color and some padding around the form */
-  .bigcontainer {
+  #bigcontainer {
     display:flex;
     flex-direction: row;
+    justify-content: center;
     align-items: flex-end;
     position:fixed;
     bottom: 0px;
-    left: 10px;
-    justify-content: space-between;
+    left: 30px;
+    
 }
 
 .flip-card {
@@ -47,7 +57,7 @@ input[type=text], select, textarea {
     text-align: center;
     line-height: 75px;
     font-size: 30px;
-    padding-right:125px;
+    padding-right:90px;
     padding-left:125px;
     margin-left: 25px;
     margin-right:25px;

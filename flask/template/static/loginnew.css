@@ -49,29 +49,6 @@ button:hover {
   padding: 16px;
 }
 
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-.forgotbtn, .signinbtn, .createaccountbtn {
-     width: 100%;
-}
-}
-
-
-/* Extra styles for the forgot password button */
-.container .clearfix .forgotbtn {
-    padding: 0px;
-    background-color: white;
-    color: black;
-    text-align: right;
-}
-
 /* Extra styles for the create account button */
 .container .clearfix .createaccountbtn {
     padding: 0px;

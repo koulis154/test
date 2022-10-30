@@ -1,10 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
-
 app = Flask(__name__, template_folder='template',static_folder='template/static')
 
 
-# @app.route('/')
-# @app.route('/index')
 @app.route('/testing', methods=['GET', 'POST'])
 def index():
 	if request.method =='POST':
@@ -12,23 +9,24 @@ def index():
 	return render_template('index.html')
 
 
-@app.route('/upload', methods=['GET', 'POST'])
+@app.route('/upload_new', methods=['GET', 'POST'])
 def upload():
     if request.method =='POST':
+
         image = request.form["image"]
         sound = request.form["sound"]
 
         if image and sound:
             print(image, sound)
+
         elif image and len(sound) == 0:
             print(image)
+
         elif sound and len(image) == 0:
             print(sound)
 
-       
         print(request.form)
-      
-    return render_template('upload.html')
+    return render_template('upload_new.html')
 
 
 @app.route('/contact', methods=['GET', 'POST'])
@@ -41,7 +39,7 @@ def contact():
         very_good = 0
         feedback = 0
         print(request.form)
-        
+    
         if "one" in request.form:
             very_bad = request.form["one"]
             
@@ -72,10 +70,13 @@ def createaccount():
         email = request.form["email"]
         password = request.form["psw"]
         new_password_1 = request.form["psw-repeat"]
+
         if "male" in request.form:
             male = request.form["male"]
+
         elif "female" in request.form:
             female = request.form["female"]
+
         elif "prefer not to say" in request.form:
             prefer_not_to_say = request.form["prefer not to say"]
         return redirect(url_for('login'))
@@ -85,6 +86,7 @@ def createaccount():
 @app.route('/forgot', methods=['GET', 'POST'])
 def forgot():
     if request.method == "POST":
+
         user_email = request.form["enter email"]
         password_forgot = request.form["new password"]
         repeat_new_psw = request.form["new password"]
@@ -100,7 +102,7 @@ def library():
 	return render_template('library.html')
 
 
-@app.route('/index', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def index12():
     if request.method =="POST":
 
@@ -155,21 +157,16 @@ def login():
 @app.route('/settings', methods=['GET', 'POST'])
 def settings():
     if request.method =="POST":
-        #enter_email = 0
-       # current_password = 0
-        #new_password = 0
-        #save = 0
+
         print(request.form)
         enter_email = request.form["enter email"]
         current_password = request.form["current password"]
         new_password = request.form["repeat new password"]
-        #save = request.form["save"]
-
+   
         return redirect(url_for('index12'))
     return render_template('settings.html')
 
 
-# this is so the app won't run if the file is imported somewhere, run using a different methed, etc.
 if __name__ == '__main__':
 	app.run('127.0.0.1', port=8080, debug=True)  #
     

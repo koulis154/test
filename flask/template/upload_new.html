@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='upload_new.css') }}">
+</head>
+<body>
+
+    <div class="container1">
+    
+        <form method = "POST">
+            <p>Upload</p>    
+            <style>
+                h1 {text-align: center;}
+                p {text-align: center;}
+                div {text-align: center;}
+                </style>
+            
+          <input type="file" name = "image" value="Image" >
+          <input type="file" name = "sound" value="Sound">
+          <input type="submit" name = "upload" value="upload" style="background:#3071a3;color:white;">
+          </form>
+            </div>
+  <h1>your prediction:</h1>
+<div class="container">
+    <div class="t">
+<!--        <img src="sr.webp">-->
+    </div>
+    <div class="t">
+<!--        <img src="sr.webp">-->
+    </div>
+    <div class="t">
+<!--        <img src="sr.webp">-->
+    </div>
+    <div class="t">
+<!--        <img src="sr.webp">-->
+    </div>
+</div>
+
+</body>
+</html>

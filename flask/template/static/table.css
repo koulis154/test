@@ -2,14 +2,15 @@ body {
     font-family: Arial, Helvetica, sans-serif;
   }
   
+
+
   .flip-card {
     background-color: transparent;
     width: 590px;
     height: 300px;
     perspective: 1000px;
-    float:left; //I just added this positioning.
+    float:left; 
   }
-  
   .flip-card-inner {
     position: relative;
     width: 100%;
