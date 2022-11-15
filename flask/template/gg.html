@@ -54,6 +54,13 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <form  method="POST" action="#">
+        {% if 'a' in r %}
+        {{r['a']}}
+        {% endif %}
+        {% if 'b' in r %}
+        {{r['b']}}
+
+        {% endif %}
       <ul class="nav navbar-nav">
         <li><input type ="submit"name = "home" value ="Home" class="btn btn-primary"></li>
         <li><input type ="submit" name = "library" value ="Library" class="btn btn-primary"></li>
@@ -69,20 +76,7 @@
     </div>
   </div>
 </nav>
-{% block content %}
-<div class="container">
-    {% for message in get_flashed_messages() %}
-    <div class="alert alert-warning">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        {{ message }}
-    </div>
-    {% endfor %}
-
-    {% block page_content %}{% endblock %}
-</div>
-{% endblock %}
-<div class="container-fluid text-center">   
-  
+<div class="container-fluid text-center">    
     <div class="col-sm-8 text-left"> 
       <h1>Website Navigation</h1>
       <p>jkdbdankvjsbnjkGNEjlgnjw;gnrw;jbnjkbnjwrnbjwnblwrnblnbljwnjdhvbhd</p>
@@ -131,6 +125,6 @@
 
           
         </div>
-    
+        <img src="{{r['/Users/macuser/Desktop/flask/template/static/images/PHOTO-2022-09-12-21-20-40\ 2.jpg']}}">
     </body>
 </html>
