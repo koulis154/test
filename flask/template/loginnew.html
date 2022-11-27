@@ -8,12 +8,7 @@
     
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ url_for('static', filename='loginnew.css') }}" type="text/css">
-    <title>test</title>
-</head>
-<!DOCTYPE html>
-<html>
-    <head>
-    </head>
+    <title>test</title>  
     <body>
         <form method="POST" style="border:1px solid #ccc">
             {% block content %}
@@ -33,10 +28,10 @@
                     <p>Please fill in this form to sign in.</p>
                 <hr>
                 <label for="email"><b>Email</b></label>
-                <input value="u" type="text" placeholder="Enter Email" name="email_1" required>
+                <input type="text" placeholder="Enter Email" name="email_1">
 
                 <label for="psw"><b>Password</b></label>
-                <input value="u" type="password" placeholder="Enter Current Password" name="psw_1" required>
+                <input type="password" placeholder="Enter Current Password" name="psw_1">
 
                 <input type="submit"  name ="sign_in" value ="Sign in" class="btn btn-primary">
                 <input type="submit"  name ="forgot" value ="Forgot Password" class="btn btn-success">
@@ -46,5 +41,5 @@
             </div>
         </form>
     </body>
-
+</head>
 </html>

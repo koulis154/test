@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -33,22 +32,22 @@
                 <hr>
 
                 <label for="first-name"><b>First Name</b></label>
-                <input type="text" placeholder="Enter First Name" name="first-name" required>
+                <input type="text" placeholder="Enter First Name" name="first-name">
 
                 <label for="last-name"><b>Last Name</b></label>
-                <input type="text" placeholder="Enter Last Name" name="last-name" required>
+                <input type="text" placeholder="Enter Last Name" name="last-name">
 
                 <label for="age"><b>Age</b></label>
-                <input type="text" placeholder="Enter Your Age" name="age" required>
+                <input type="text" placeholder="Enter Your Age" name="age">
 
                 <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
+                <input type="text" placeholder="Enter Email" name="email">
 
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <input type="password" placeholder="Enter Password" name="psw">
 
                 <label for="psw-repeat"><b>Repeat Password</b></label>
-                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat">
 
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault1" value = "Male">
@@ -63,17 +62,36 @@
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault3" value = "Prefere not to say" checked>
+                    <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault3" value = "Prefer not to say" checked>
                     <label class="form-check-label" for="flexRadioDefault3">
-                      Prefere not to say
+                      Prefer not to say
                     </label>
                   </div>
-
+                <!-- <div class="gender">
+                    <ul class="gender_list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="male" style="margin-bottom:15px"> Male
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="female" style="margin-bottom:15px"> Female
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" checked="checked" name="prefer not to say" style="margin-bottom:15px"> Prefer not to say.
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                 -->
                 <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
                 <div class="clearfix">
-                    <input type="submit" name = "cancel button" class="btn btn-danger" value = "cancel">
-                    <input type="submit" name = "sign in" class="btn btn-primary" value = "Create account">
+                    <input type="submit" name = "cancel" class="btn btn-danger" value = "Cancel">
+                    <input type="submit" name = "create" class="btn btn-primary" value = "Create account">
                 </div>
             </div>
         </form>
